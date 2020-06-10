@@ -7,86 +7,120 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <style>
+    
+    <!-- Mine CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css">
 
-    .navbar {
-      margin-top: -10px;
-    }
-
-    .navbar-brand {
-      margin-top: -8px;
-      padding-left: 8px;
-    }
-
-    div#nav2lletres {
-      width: 100vw;
-      height: 105px;
-      border-top: 2px solid black;
-      background-color: white;
-      position: fixed;
-      bottom: 0;
-    }
-
-    div#nav2lletres p {
-      font-size: 12.2vh;
-      padding: 0px 10px;
-    }
-
-    div#filtres {
-      margin-top: 200px;
-    }
-
-    div#filtres div div {
-      padding: 0px;
-    }
-
-    div#filtres div div div {
-      float: left;
-      width: 95%;
-      height: 40px;
-    }
-
-    </style>
-
-    <title>Hello, world!</title>
+    <title>Nomenclàtor de Barcelona</title>
   </head>
   <body>
-      <nav class="navbar navbar-expand-lg navbar-light fixed-top row align-items-start">
-        <a class="navbar-brand" href="#" style="font-size: 48px;">NOMENCLATOR DE BARCELONA</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+      <nav class="navbar navbar-expand-xl navbar-light fixed-top row align-items-start">
+        <a class="navbar-brand" href="#"><span>NOMENCLATOR</span><span> DE BARCELONA</span></a>
+          <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto" style="font-size: 24px; color: black;">
-            <li class="nav-item">
-              <a class="nav-link" href="#">DOCUMENTACIÓ</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">CONTACTE</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">CAST / EN</a>
-            </li>
-          </ul>
-        </div>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto" style="font-size: 24px; color: black;">
+              <li class="nav-item">
+                <a class="nav-link" href="#"><button type="button" data-toggle="modal" data-target="#exampleModalCenter">
+                  PROJECTE
+                </button></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"><button type="button" data-toggle="modal" data-target="#exampleModalCenter2">
+                  CONTACTE
+                </button></a>
+              </li>
+              <li class="nav-item">
+                <div class="dropdown show">
+                  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    CAT
+                  </a>
+                
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" href="...">CASTELLANO</a>
+                    <a class="dropdown-item" href="...">ENGLISH</a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
       </nav>
 
 
+    <!-- Hre MODAL starts -->  
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Benvingut al Nomenclàtor de Barcelona</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Aquí podràs trobar informació sobre totes les vies de la Ciutat de Barcelona. Lloc web en procés de desenvolupament. Dissenyat i desenvolupat per Marc Español dins del programa <a href="https://cibernarium.barcelonactiva.cat/it-academy">IT Academy</a>. <br><br> Tota la informació que es mostra en aquesta web és extreta de l'<a href="https://opendata-ajuntament.barcelona.cat/">Open Data</a> de l'Ajuntament de Barcelona.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hre MODAL 2 starts -->  
+    <div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Contacta'ns</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Omple i envia'ns el formulari que es mostra a continuació. Intentarem respondre el més aviat ens sigui possible.
+            <div class="container text-center">
+              <div class="card p-5">
+                  <div class="row">
+                      <div class="col-md-12">
+                          <div class="row">
+                              <div class="col-md-6"> <input type="text" placeholder="Nom" class="form-control" /> </div>
+                              <div class="col-md-6"> <input type="text" placeholder="Adreça electrònica" class="form-control" /> </div>
+                          </div>
+                          <div class="row mt-3">
+                              <div class="col-md-12"> <textarea class="form-control textarea" rows="4">Missatge </textarea> </div>
+                          </div>
+                          <div class="send-button mt-4"> <button class="button">Enviar</button> </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="container-fluid" id="filtres">
-      <div class="row justify-content-md-center">
-        <div class="col-3">
-          <div style="border: 1px solid #ccc;"></div>
+      <div class="row ">
+        <div class="col-1"></div>
+
+        <div class="col-5 col-lg-3">
+          <div>Cerca<img src="Icons/IconsNomenclator-01.svg"/></div>
         </div>
-        <div class="col-2">
-          <div style="border: 1px solid #ccc;"></div>
+        <div class="col-lg-2 d-none d-lg-block">
+          <div>Tots els tipus de via<img id="icon2" src="Icons/IconsNomenclator-02.svg"/></div>
         </div>
-        <div class="col-1">
-          <div style="border: 1px solid #ccc;"></div>
+        <div class="col-lg-1 d-none d-lg-block">
+          <div>Anys<img id="icon2" src="Icons/IconsNomenclator-02.svg"/></div>
         </div>
-        <div class="col-3">
-          <div style="border: 1px solid #ccc;"></div>
+        <div class="col-lg-3 d-none d-lg-block">
+          <div>Tots els districtes<img id="icon2" src="Icons/IconsNomenclator-02.svg"/></div>
         </div>
+
+        <div class="col-4 d-lg-none">
+            <div>Filtres<img id="icon2" src="Icons/IconsNomenclator-02.svg"/></div>
+          </div>
+
+        <div class="col-lg-1 d-none d-lg-block"></div>
         <div class="col-1"></div>
       </div>
     </div>
@@ -96,119 +130,286 @@
         <thead>
             <tr class="d-flex">
                 <th class="col-1"></th>
-                <th class="col-3">Nom</th>
-                <th class="col-2">Tipus</th>
-                <th class="col-1">Any</th>
-                <th class="col-3">Districte</th>
+                <th class="col-5 col-lg-3">Nom<img id="icon3" src="Icons/IconsNomenclator-03.svg"/></th>
+                <th class="col-4 col-lg-2">Tipus<img id="icon3" src="Icons/IconsNomenclator-03.svg"/></th>
+                <th class="col-1 d-none d-lg-block">Any<img id="icon3" src="Icons/IconsNomenclator-03.svg"/></th>
+                <th class="col-3 d-none d-lg-block">Districte<img id="icon3" src="Icons/IconsNomenclator-03.svg"/></th>
                 <th class="col-1"></th>
                 <th class="col-1"></th>
             </tr>
         </thead>
+
         <tbody>
             <tr class="d-flex">
                 <td class="col-1"></td>
-                <td class="col-3">Mallorca</td>
-                <td class="col-2">carrer de</td>
-                <td class="col-1">1906</td>
-                <td class="col-3">Eixample (03)</td>
-                <td class="col-1">+info</td>
+                <td class="col-5 col-lg-3">A</td>
+                <td class="col-4 col-lg-2">carrer</td>
+                <td class="col-1 d-none d-lg-block">1968</td>
+                <td class="col-3 d-none d-lg-block">Sants-Montjuïc (03)</td>
+                <td class="col-1">info<img id="icon3" src="Icons/IconsNomenclator-03.svg"/></td>
                 <td class="col-1"></td>
             </tr>
             <tr class="d-flex">
                 <td class="col-1"></td>
-                <td class="col-3">Mallorca</td>
-                <td class="col-2">carrer de</td>
-                <td class="col-1">1906</td>
-                <td class="col-3">Eixample (03)</td>
-                <td class="col-1">+info</td>
+                <td class="col-5 col-lg-3">Abadessa Olzet</td>
+                <td class="col-4 col-lg-2">carrer de l'</td>
+                <td class="col-1 d-none d-lg-block">1931</td>
+                <td class="col-3 d-none d-lg-block">Les Corts (04)</td>
+                <td class="col-1">info<img id="icon3" src="Icons/IconsNomenclator-03.svg"/></td>
                 <td class="col-1"></td>
             </tr>
             <tr class="d-flex">
                 <td class="col-1"></td>
-                <td class="col-3">Mallorca</td>
-                <td class="col-2">carrer de</td>
-                <td class="col-1">1906</td>
-                <td class="col-3">Eixample (03)</td>
-                <td class="col-1">+info</td>
+                <td class="col-5 col-lg-3">Abaixadors</td>
+                <td class="col-4 col-lg-2">carrer dels</td>
+                <td class="col-1 d-none d-lg-block">>1865</td>
+                <td class="col-3 d-none d-lg-block">Ciutat Vella (01)</td>
+                <td class="col-1">info<img id="icon3" src="Icons/IconsNomenclator-03.svg"/></td>
                 <td class="col-1"></td>
             </tr>
             <tr class="d-flex">
                 <td class="col-1"></td>
-                <td class="col-3">Mallorca</td>
-                <td class="col-2">carrer de</td>
-                <td class="col-1">1906</td>
-                <td class="col-3">Eixample (03)</td>
-                <td class="col-1">+info</td>
+                <td class="col-5 col-lg-3">Abat Escarré</td>
+                <td class="col-4 col-lg-2">plaça de l'</td>
+                <td class="col-1 d-none d-lg-block">1990</td>
+                <td class="col-3 d-none d-lg-block">Sant Andreu (09)</td>
+                <td class="col-1">info<img id="icon3" src="Icons/IconsNomenclator-03.svg"/></td>
                 <td class="col-1"></td>
             </tr>
             <tr class="d-flex">
                 <td class="col-1"></td>
-                <td class="col-3">Mallorca</td>
-                <td class="col-2">carrer de</td>
-                <td class="col-1">1906</td>
-                <td class="col-3">Eixample (03)</td>
-                <td class="col-1">+info</td>
+                <td class="col-5 col-lg-3">Abat Odó</td>
+                <td class="col-4 col-lg-2">carrer de l'</td>
+                <td class="col-1 d-none d-lg-block">1940</td>
+                <td class="col-3 d-none d-lg-block">Sant Andreu (09)</td>
+                <td class="col-1">info<img id="icon3" src="Icons/IconsNomenclator-03.svg"/></td>
                 <td class="col-1"></td>
             </tr>
             <tr class="d-flex">
                 <td class="col-1"></td>
-                <td class="col-3">Mallorca</td>
-                <td class="col-2">carrer de</td>
-                <td class="col-1">1906</td>
-                <td class="col-3">Eixample (03)</td>
-                <td class="col-1">+info</td>
+                <td class="col-5 col-lg-3">Abat Safont</td>
+                <td class="col-4 col-lg-2">carrer de l'</td>
+                <td class="col-1 d-none d-lg-block">>1900</td>
+                <td class="col-3 d-none d-lg-block">Ciutat Vella (01)</td>
+                <td class="col-1">info<img id="icon3" src="Icons/IconsNomenclator-03.svg"/></td>
                 <td class="col-1"></td>
             </tr>
             <tr class="d-flex">
                 <td class="col-1"></td>
-                <td class="col-3">Mallorca</td>
-                <td class="col-2">carrer de</td>
-                <td class="col-1">1906</td>
-                <td class="col-3">Eixample (03)</td>
-                <td class="col-1">+info</td>
+                <td class="col-5 col-lg-3">	Abat Samsó</td>
+                <td class="col-4 col-lg-2">carrer de l'</td>
+                <td class="col-1 d-none d-lg-block">1939</td>
+                <td class="col-3 d-none d-lg-block">Sarrià-Sant Gervasi (05)</td>
+                <td class="col-1">info<img id="icon3" src="Icons/IconsNomenclator-03.svg"/></td>
                 <td class="col-1"></td>
             </tr>
             <tr class="d-flex">
                 <td class="col-1"></td>
-                <td class="col-3">Mallorca</td>
-                <td class="col-2">carrer de</td>
-                <td class="col-1">1906</td>
-                <td class="col-3">Eixample (03)</td>
-                <td class="col-1">+info</td>
+                <td class="col-5 col-lg-3">Abd el-Kader</td>
+                <td class="col-4 col-lg-2">carrer d'</td>
+                <td class="col-1 d-none d-lg-block">1950</td>
+                <td class="col-3 d-none d-lg-block">Horta-Guinardó (07)</td>
+                <td class="col-1">info<img id="icon3" src="Icons/IconsNomenclator-03.svg"/></td>
                 <td class="col-1"></td>
             </tr>
             <tr class="d-flex">
                 <td class="col-1"></td>
-                <td class="col-3">Mallorca</td>
-                <td class="col-2">carrer de</td>
-                <td class="col-1">1906</td>
-                <td class="col-3">Eixample (03)</td>
-                <td class="col-1">+info</td>
+                <td class="col-5 col-lg-3">Abdó Terradas</td>
+                <td class="col-4 col-lg-2">carrer d'</td>
+                <td class="col-1 d-none d-lg-block">1922</td>
+                <td class="col-3 d-none d-lg-block">Gràcia (06)</td>
+                <td class="col-1">info<img id="icon3" src="Icons/IconsNomenclator-03.svg"/></td>
                 <td class="col-1"></td>
             </tr>
             <tr class="d-flex">
                 <td class="col-1"></td>
-                <td class="col-3">Mallorca</td>
-                <td class="col-2">carrer de</td>
-                <td class="col-1">1906</td>
-                <td class="col-3">Eixample (03)</td>
-                <td class="col-1">+info</td>
+                <td class="col-5 col-lg-3">	Abella</td>
+                <td class="col-4 col-lg-2">carrer d'</td>
+                <td class="col-1 d-none d-lg-block">1945</td>
+                <td class="col-3 d-none d-lg-block">Nou Barris (08)</td>
+                <td class="col-1">info<img id="icon3" src="Icons/IconsNomenclator-03.svg"/></td>
                 <td class="col-1"></td>
             </tr>
             <tr class="d-flex">
                 <td class="col-1"></td>
-                <td class="col-3">Mallorca</td>
-                <td class="col-2">carrer de</td>
-                <td class="col-1">1906</td>
-                <td class="col-3">Eixample (03)</td>
-                <td class="col-1">+info</td>
+                <td class="col-5 col-lg-3">Acàcies</td>
+                <td class="col-4 col-lg-2">carrer de les</td>
+                <td class="col-1 d-none d-lg-block">1927</td>
+                <td class="col-3 d-none d-lg-block">Sant Andreu (09)</td>
+                <td class="col-1">info<img id="icon3" src="Icons/IconsNomenclator-03.svg"/></td>
                 <td class="col-1"></td>
+            </tr>
+            <tr class="d-flex">
+              <td class="col-1"></td>
+              <td class="col-5 col-lg-3">Acadèmia</td>
+              <td class="col-4 col-lg-2">plaça de l'</td>
+              <td class="col-1 d-none d-lg-block">-</td>
+              <td class="col-3 d-none d-lg-block">Ciutat Vella (01)</td>
+              <td class="col-1">info<img id="icon3" src="Icons/IconsNomenclator-03.svg"/></td>
+              <td class="col-1"></td>
+            </tr>
+            <tr class="d-flex">
+              <td class="col-1"></td>
+              <td class="col-5 col-lg-3">Acer</td>
+              <td class="col-4 col-lg-2">carrer de l'</td>
+              <td class="col-1 d-none d-lg-block">1958</td>
+              <td class="col-3 d-none d-lg-block">Sants-Montjuïc (03)</td>
+              <td class="col-1">info<img id="icon3" src="Icons/IconsNomenclator-03.svg"/></td>
+              <td class="col-1"></td>
+            </tr>
+            <tr class="d-flex">
+              <td class="col-1"></td>
+              <td class="col-5 col-lg-3">Açores</td>
+              <td class="col-4 col-lg-2">carrer de les</td>
+              <td class="col-1 d-none d-lg-block">1960</td>
+              <td class="col-3 d-none d-lg-block">Sant Andreu (09)</td>
+              <td class="col-1">info<img id="icon3" src="Icons/IconsNomenclator-03.svg"/></td>
+              <td class="col-1"></td>
+            </tr>
+            <tr class="d-flex">
+              <td class="col-1"></td>
+              <td class="col-5 col-lg-3">Actor Morano</td>
+              <td class="col-4 col-lg-2">carrer de l'</td>
+              <td class="col-1 d-none d-lg-block">1942</td>
+              <td class="col-3 d-none d-lg-block">Sarrià-Sant Gervasi (05)</td>
+              <td class="col-1">info<img id="icon3" src="Icons/IconsNomenclator-03.svg"/></td>
+              <td class="col-1"></td>
+            </tr>
+            <tr class="d-flex">
+              <td class="col-1"></td>
+              <td class="col-5 col-lg-3">Actriu Tubau</td>
+              <td class="col-4 col-lg-2">carrer de l'</td>
+              <td class="col-1 d-none d-lg-block">1942</td>
+              <td class="col-3 d-none d-lg-block">Sarrià-Sant Gervasi (05)</td>
+              <td class="col-1">info<img id="icon3" src="Icons/IconsNomenclator-03.svg"/></td>
+              <td class="col-1"></td>
+            </tr>
+            <tr class="d-flex">
+              <td class="col-1"></td>
+              <td class="col-5 col-lg-3">Ada Byron</td>
+              <td class="col-4 col-lg-2">jardins d'</td>
+              <td class="col-1 d-none d-lg-block">2007</td>
+              <td class="col-3 d-none d-lg-block">Sant Martí (10)</td>
+              <td class="col-1">info<img id="icon3" src="Icons/IconsNomenclator-03.svg"/></td>
+              <td class="col-1"></td>
+            </tr>
+            <tr class="d-flex">
+              <td class="col-1"></td>
+              <td class="col-5 col-lg-3">Adolf Florensa</td>
+              <td class="col-4 col-lg-2">carrer d'</td>
+              <td class="col-1 d-none d-lg-block">1982</td>
+              <td class="col-3 d-none d-lg-block">Les Corts (04)</td>
+              <td class="col-1">info<img id="icon3" src="Icons/IconsNomenclator-03.svg"/></td>
+              <td class="col-1"></td>
+            </tr>
+            <tr class="d-flex">
+              <td class="col-1"></td>
+              <td class="col-5 col-lg-3">Adolf Marsillach</td>
+              <td class="col-4 col-lg-2">plaça d'</td>
+              <td class="col-1 d-none d-lg-block">2008</td>
+              <td class="col-3 d-none d-lg-block">Horta-Guinardó (07)</td>
+              <td class="col-1">info<img id="icon3" src="Icons/IconsNomenclator-03.svg"/></td>
+              <td class="col-1"></td>
+            </tr>
+            <tr class="d-flex">
+              <td class="col-1"></td>
+              <td class="col-5 col-lg-3">Adossat</td>
+              <td class="col-4 col-lg-2">moll</td>
+              <td class="col-1 d-none d-lg-block">-</td>
+              <td class="col-3 d-none d-lg-block">Ciutat Vella (01)</td>
+              <td class="col-1">info<img id="icon3" src="Icons/IconsNomenclator-03.svg"/></td>
+              <td class="col-1"></td>
+            </tr>
+            <tr class="d-flex">
+              <td class="col-1"></td>
+              <td class="col-5 col-lg-3">Adrall</td>
+              <td class="col-4 col-lg-2">carrer d'</td>
+              <td class="col-1 d-none d-lg-block">1945</td>
+              <td class="col-3 d-none d-lg-block">Sant Andreu (09)</td>
+              <td class="col-1">info<img id="icon3" src="Icons/IconsNomenclator-03.svg"/></td>
+              <td class="col-1"></td>
+            </tr>
+            <tr class="d-flex">
+              <td class="col-12" style="background-color: black;"> 
+
+              </td>
+            </tr>
+            <tr class="d-flex">
+              <td class="col-12" style="background-color: black;"> 
+
+              </td>
+            </tr>
+            <tr class="d-flex">
+              <td class="col-12" style="background-color: black;"> 
+
+              </td>
+            </tr>
+            <tr class="d-flex">
+              <td class="col-12" style="background-color: black;"> 
+
+              </td>
+            </tr>
+            <tr class="d-flex">
+              <td class="col-12" style="background-color: black;"> 
+
+              </td>
+            </tr>
+            <tr class="d-flex">
+              <td class="col-12" style="background-color: black;"> 
+
+              </td>
+            </tr>
+            <tr class="d-flex">
+              <td class="col-12" style="background-color: black;"> 
+
+              </td>
+            </tr>
+            <tr class="d-flex">
+              <td class="col-12" style="background-color: black;"> 
+
+              </td>
+            </tr>
+            <tr class="d-flex">
+              <td class="col-12" style="background-color: black;"> 
+
+              </td>
+            </tr>
+            <tr class="d-flex">
+              <td class="col-12" style="background-color: black;"> 
+
+              </td>
+            </tr>
+            <tr class="d-flex">
+              <td class="col-12" style="background-color: black;"> 
+
+              </td>
+            </tr>
+            <tr class="d-flex">
+              <td class="col-12" style="background-color: black;"> 
+
+              </td>
+            </tr>
+            <tr class="d-flex">
+              <td class="col-12" style="background-color: black;"> 
+
+              </td>
+            </tr>
+            <tr class="d-flex">
+              <td class="col-12" style="background-color: black;"> 
+
+              </td>
+            </tr>
+            <tr class="d-flex">
+              <td class="col-12" style="background-color: black;"> 
+
+              </td>
             </tr>
         </tbody>
     </table>
 </div>
 <div id="nav2lletres">
-  <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+  <p>
+    <a href="file:///Users/marcespanolconesa/Downloads/ProjectesWebs/Nomenclator/index.html">A</a><a href="...">B</a><a href="...">C</a><a href="...">D</a><a href="...">E</a><a href="...">F</a><a href="...">G</a><a href="...">H</a><a href="...">I</a><a href="...">J</a><a href="...">K</a><a href="...">L</a><a href="...">M</a><a href="...">N</a><a href="...">O</a><a href="...">P</a><a href="...">Q</a><a href="...">R</a><a href="...">S</a><a href="...">T</a><a href="...">U</a><a href="...">V</a><a href="...">W</a><a href="...">X</a><a href="...">Y</a><a href="...">Z</a></p>
 </div>
 
 
@@ -217,5 +418,21 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+     <!-- Form Script -->
+     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+
+     <!-- Current Link Script -->
+     <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+      <script>
+      $(function(){
+        $('a').each(function() {
+          if ($(this).prop('href') == window.location.href) {
+            $(this).addClass('current');
+          }
+        });
+      });
+      </script>
+
   </body>
 </html>
